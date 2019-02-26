@@ -41,7 +41,7 @@
                 </div>
                 
                 <script>
-                  
+                  /*瀑布流的逻辑，比较列的高度，无视列，图片的位置以css的方式设置left和top即可*/
               
                 /*  var waterfall = {
                     init: function(){
@@ -91,9 +91,9 @@
                   */
                 var colCount
                 var colHeightArray = []
-                var imgWidth = $('.waterfall img').outerWidth(true)
+                var imgWidth = $('.waterfall img').outerWidth(true)/*outerWidth(true)包含了margin*/
     
-                colCount = Math.floor($('.waterfall').width()/imgWidth)
+                colCount = Math.floor($('.waterfall').width()/imgWidth)/*width()指内容的宽度*/
   
                 for(var i=0; i<colCount; i++){
                     colHeightArray[i] = 0
